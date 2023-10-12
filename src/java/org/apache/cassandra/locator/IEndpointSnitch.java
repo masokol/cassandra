@@ -29,6 +29,11 @@ import org.apache.cassandra.utils.FBUtilities;
 
 public interface IEndpointSnitch
 {
+    default boolean shouldPreferLocal()
+    {
+        return false;
+    }
+
     /**
      * returns a String representing the rack the given endpoint belongs to
      */

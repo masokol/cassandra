@@ -156,4 +156,10 @@ public class GossipingPropertyFileSnitch extends AbstractNetworkTopologySnitch//
         if (pendingHelper != null)
             Gossiper.instance.unregister(pendingHelper);
     }
+
+    @Override
+    public boolean shouldPreferLocal()
+    {
+        return preferLocal;
+    }
 }
